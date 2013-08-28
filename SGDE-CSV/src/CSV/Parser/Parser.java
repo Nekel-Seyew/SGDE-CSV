@@ -6,7 +6,7 @@ package CSV.Parser;
  */
 
 /**
- *
+ * takes a file, and builds a database.
  * @author kdsweenx
  */
 public class Parser {
