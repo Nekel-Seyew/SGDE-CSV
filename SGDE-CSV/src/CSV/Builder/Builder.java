@@ -4,34 +4,38 @@
  */
 package CSV.Builder;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.StringBuilder;
-import java.util.Hashtable;
+import java.util.HashMap;
+
+import CSV.main.Database;
 
 /**
- *
- * @author kdsweenx
+ * This class writes the data in a Database object to files
+ * @author eddiew
  */
 public class Builder {
-    private static StringBuilder fileContents;
-    public static void makeCSVFile(Database db){
-        for(Hashtable row : db){
-            for(Object obj : row){
-                fileContents.append(obj.toString());
-                fileContents.append(',');
+    /**
+     * Creates a Comma-Separated Values file from the objects in the given Database.
+     * filePath should include the name of the output file (e.g. "C:/out.csv").
+     * The objects in db should implement toString() in order to be saved correctly.
+     * @param db
+     * @param filePath
+     * @throws IOException
+     */
+    public static void makeCSVFile(Database db, String filePath) throws IOException {
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File(filePath)));
+        for(HashMap row : db.getData().values()){
+            for(Object obj : row.values()){
+                bufferedWriter.write('"');
+                bufferedWriter.write(obj.toString());
+                bufferedWriter.write('"');
+                bufferedWriter.write(',');
             }
-            fileContents.append('\n');
+            bufferedWriter.newLine();
         }
-
-    }
-    public static void makeCSVFile(Database db, Path filePath) throws IOException {
-        for(Hashtable row : db){
-            for(Object obj : row){
-                fileContents.append(obj.toString());
-                fileContents.append(',');
-            }
-            fileContents.append('\n');
-        }
-        Files.newBufferedWriter(filePath, fileContents).write(s, 0, s.length());
+        bufferedWriter.close();
     }
 }

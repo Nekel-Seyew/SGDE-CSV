@@ -5,6 +5,7 @@
 package CSV.main;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Hashtable;
 
 /**
@@ -17,10 +18,10 @@ public class Database {
     public static final int SPACE=2;
     public static final int SEMICOLAN=3;
     
-    Hashtable<Integer, Hashtable<Integer, Object>> data;
+    HashMap<Integer, HashMap<Integer, Object>> data;
     
     public Database(){
-        data= new Hashtable<Integer, Hashtable<Integer, Object>>();
+        data= new HashMap<Integer, HashMap<Integer, Object>>();
     }
     
     public void put(Object v, int row, int col){
@@ -39,5 +40,9 @@ public class Database {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public HashMap<Integer, HashMap<Integer, Object>> getData(){
+        return data;
     }
 }
