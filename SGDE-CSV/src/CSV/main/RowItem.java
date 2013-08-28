@@ -4,16 +4,18 @@
  */
 package CSV.main;
 
+import java.io.Serializable;
+
 /**
  *
  * @author kdsweenx
  */
-public class RowItem {
-    String value="";
+public class RowItem implements Serializable{
+    Object value;
     String loc="";
     
-    public RowItem(String value, String loc){
-        this.value=new String(value);
+    public RowItem(Object value, String loc){
+        this.value=value;
         this.loc=new String(loc);
     }
     
@@ -21,7 +23,7 @@ public class RowItem {
         return loc;
     }
     
-    public String getValue(){
+    public Object getValue(){
         return value;
     }
 
