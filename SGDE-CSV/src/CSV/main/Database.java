@@ -28,8 +28,9 @@ public class Database {
         try{
             data.get(row).put(col, v);
         }catch(NullPointerException npe){
-            Hashtable<Integer, Object> r=new Hashtable<Integer, Object>();
+            HashMap<Integer, Object> r=new HashMap<Integer, Object>();
             r.put(col, v);
+            data.put(row, r);
         }
     }
     
