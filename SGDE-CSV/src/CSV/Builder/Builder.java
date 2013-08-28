@@ -4,12 +4,37 @@
  */
 package CSV.Builder;
 
-/**
- *
- * @author kdsweenx
- */
-public static class Builder {
-    public static void makeCSVFile(){
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.HashMap;
 
+import CSV.main.Database;
+
+/**
+ * This class writes the data in a Database object to files
+ * @author eddiew
+ */
+public class Builder {
+    /**
+     * Creates a Comma-Separated Values file from the objects in the given Database.
+     * The objects in db should implement toString() in order to be saved correctly.
+     * @param db The database object containing the data to be exported
+     * @param filePath The desired path and name of the output file (e.g. "C:/out.csv")
+     * @throws IOException
+     */
+    public static void makeCSVFile(Database db, String filePath) throws IOException {
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File(filePath)));
+        for(HashMap row : db.getData().values()){
+            for(Object obj : row.values()){
+                bufferedWriter.write('"');
+                bufferedWriter.write(obj.toString());
+                bufferedWriter.write('"');
+                bufferedWriter.write(',');
+            }
+            bufferedWriter.newLine();
+        }
+        bufferedWriter.close();
     }
 }
