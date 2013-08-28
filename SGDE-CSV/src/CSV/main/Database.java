@@ -28,6 +28,15 @@ public class Database {
         }
     }
     
+    public String get(int row, int col){
+        try{
+            return data.get(row).getValue(col);
+        }catch(Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+    
     
     
     private class Row{
@@ -41,6 +50,10 @@ public class Database {
         
         public void put(int i, String v){
             data.put(i, new RowItem(v,getColumnLetters(i)));
+        }
+        
+        public String getValue(int col){
+            return data.get(col).getValue();
         }
         
         private String getColumnLetters(int i){
