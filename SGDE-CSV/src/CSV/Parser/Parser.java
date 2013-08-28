@@ -48,7 +48,7 @@ public class Parser {
         switch(type){
             case Database.COMMA:
                 return ",";
-            case Database.SEMICOLAN:
+            case Database.SEMICOLON:
                 return ";";
             case Database.SPACE:
                 return " ";
