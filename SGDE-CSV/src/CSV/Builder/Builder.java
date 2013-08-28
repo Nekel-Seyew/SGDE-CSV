@@ -19,10 +19,9 @@ import CSV.main.Database;
 public class Builder {
     /**
      * Creates a Comma-Separated Values file from the objects in the given Database.
-     * filePath should include the name of the output file (e.g. "C:/out.csv").
      * The objects in db should implement toString() in order to be saved correctly.
-     * @param db
-     * @param filePath
+     * @param db The database object containing the data to be exported
+     * @param filePath The desired path and name of the output file (e.g. "C:/out.csv")
      * @throws IOException
      */
     public static void makeCSVFile(Database db, String filePath) throws IOException {

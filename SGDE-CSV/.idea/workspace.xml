@@ -70,9 +70,9 @@
       <file leaf-file-name="Builder.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CSV/Builder/Builder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="59" selection-start="346" selection-end="346" vertical-scroll-proportion="0.26406926" vertical-offset="72" max-vertical-offset="799">
+            <state line="23" column="87" selection-start="729" selection-end="729" vertical-scroll-proportion="0.46031746" vertical-offset="72" max-vertical-offset="782">
               <folding>
-                <element signature="e#0#1286#0" expanded="true" />
+                <element signature="e#0#1326#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -413,9 +413,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CSV/Builder/Builder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="59" selection-start="346" selection-end="346" vertical-scroll-proportion="0.26406926" vertical-offset="72" max-vertical-offset="799">
+        <state line="23" column="87" selection-start="729" selection-end="729" vertical-scroll-proportion="0.46031746" vertical-offset="72" max-vertical-offset="782">
           <folding>
-            <element signature="e#0#1286#0" expanded="true" />
+            <element signature="e#0#1326#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
