@@ -35,5 +35,4 @@ public class RowItem implements Serializable{
         this.loc = new String(loc);
     }
     
-    
 }
