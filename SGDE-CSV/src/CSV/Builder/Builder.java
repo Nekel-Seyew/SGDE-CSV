@@ -8,6 +8,8 @@ package CSV.Builder;
  *
  * @author kdsweenx
  */
-public class Builder {
-    
+public static class Builder {
+    public static void makeCSVFile(){
+
+    }
 }
