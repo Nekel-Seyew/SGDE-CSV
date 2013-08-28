@@ -16,7 +16,7 @@ public class Database {
     public static final int COMMA=0;
     public static final int TAB=1;
     public static final int SPACE=2;
-    public static final int SEMICOLAN=3;
+    public static final int SEMICOLON=3;
     
     HashMap<Integer, HashMap<Integer, Object>> data;
     
